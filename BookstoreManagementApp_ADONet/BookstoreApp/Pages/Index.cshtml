@@ -1,0 +1,56 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Bookstore Management System</h1>
+    <p class="lead">A comprehensive ADO.NET demonstration application built with .NET 9.0</p>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Manage Books</h5>
+                <p class="card-text">Add, edit, view, and delete books using various ADO.NET approaches.</p>
+                <a href="/Books" class="btn btn-primary">View Books</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">DataSet Operations</h5>
+                <p class="card-text">Demonstrate disconnected data operations using DataSet and DataTable.</p>
+                <a href="/Books/DataSetDemo" class="btn btn-info">DataSet Demo</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Security Features</h5>
+                <p class="card-text">All database operations use parameterized queries to prevent SQL injection.</p>
+                <a href="/Books" class="btn btn-success">Explore Security</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <h3>Features Implemented</h3>
+        <ul class="list-group">
+            <li class="list-group-item">✅ Connected Architecture with SqlConnection and SqlCommand</li>
+            <li class="list-group-item">✅ SqlDataReader for efficient data reading</li>
+            <li class="list-group-item">✅ SqlDataAdapter for DataSet operations</li>
+            <li class="list-group-item">✅ Stored Procedures for database operations</li>
+            <li class="list-group-item">✅ Parameterized queries to prevent SQL injection</li>
+            <li class="list-group-item">✅ DataSet and DataTable for disconnected operations</li>
+            <li class="list-group-item">✅ Comprehensive error handling and logging</li>
+            <li class="list-group-item">✅ Input validation and sanitization</li>
+        </ul>
+    </div>
+</div>

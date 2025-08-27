@@ -1,0 +1,90 @@
+@page "/Books/Edit/{id:int}"
+@model BookstoreApp.Pages.Books.EditModel
+@{
+    ViewData["Title"] = "Edit Book";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-header">
+                <h3>Edit Book</h3>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <input type="hidden" asp-for="Book.BookId" />
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label asp-for="Book.Title" class="form-label"></label>
+                                <input asp-for="Book.Title" class="form-control" />
+                                <span asp-validation-for="Book.Title" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label asp-for="Book.Author" class="form-label"></label>
+                                <input asp-for="Book.Author" class="form-control" />
+                                <span asp-validation-for="Book.Author" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label asp-for="Book.ISBN" class="form-label"></label>
+                                <input asp-for="Book.ISBN" class="form-control" />
+                                <span asp-validation-for="Book.ISBN" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label asp-for="Book.Genre" class="form-label"></label>
+                                <input asp-for="Book.Genre" class="form-control" />
+                                <span asp-validation-for="Book.Genre" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label asp-for="Book.Price" class="form-label"></label>
+                                <input asp-for="Book.Price" class="form-control" type="number" step="0.01" />
+                                <span asp-validation-for="Book.Price" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label asp-for="Book.PublishedYear" class="form-label"></label>
+                                <input asp-for="Book.PublishedYear" class="form-control" type="number" />
+                                <span asp-validation-for="Book.PublishedYear" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input type="checkbox" id="useStoredProcedure" name="useStoredProcedure" class="form-check-input" />
+                            <label class="form-check-label" for="useStoredProcedure">
+                                Use Stored Procedure (Demo)
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a asp-page="./Index" class="btn btn-secondary me-md-2">Cancel</a>
+                        <button type="submit" class="btn btn-primary">Update Book</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
